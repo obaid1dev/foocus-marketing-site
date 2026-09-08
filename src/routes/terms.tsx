@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { LegalLayout, Placeholder } from "@/components/site/LegalLayout";
+import { LegalLayout } from "@/components/site/LegalLayout";
 
 const TITLE = "Terms of Service — Foocus";
 const DESCRIPTION =
@@ -25,12 +25,12 @@ function TermsPage() {
   return (
     <LegalLayout
       title="Terms of Service"
-      updated={new Date("2026-09-07").toLocaleDateString("en-US", {
+      updated={new Date("2026-09-08").toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
       })}
-      intro="These terms govern your use of Foocus. Anything marked in brackets still needs to be confirmed before publishing."
+      intro="These terms govern your use of Foocus."
       relatedLabel="Privacy Policy"
       relatedHref="/privacy"
       sections={[
@@ -51,8 +51,8 @@ function TermsPage() {
             <p>
               Foocus is a mobile productivity app for iOS and Android. It lets you create tasks,
               organise them into groups, and optionally use a built-in AI assistant to turn
-              plain-language messages into structured tasks. Foocus is operated by{" "}
-              <Placeholder>legal entity name</Placeholder>.
+              plain-language messages into structured tasks. Foocus is operated under the Foocus
+              name.
             </p>
           ),
         },
@@ -61,8 +61,8 @@ function TermsPage() {
           heading: "Eligibility",
           body: (
             <p>
-              You must be at least <Placeholder>minimum age</Placeholder> years old to use Foocus.
-              By using the app you confirm you meet this requirement.
+              You must be at least 13 years old to use Foocus. By using the app you confirm you meet
+              this requirement.
             </p>
           ),
         },
@@ -71,12 +71,11 @@ function TermsPage() {
           heading: "Your account",
           body: (
             <p>
-              <Placeholder>
-                Describe how accounts work — e.g. no account required, Apple/Google sign-in, email
-                sign-up, etc.
-              </Placeholder>{" "}
-              You are responsible for keeping any sign-in credentials secure and for all activity
-              under your account.
+              Foocus may require an account so that your tasks, settings, and related data can be
+              associated with you and synchronised across supported sessions or devices.
+              Authentication may be provided through the sign-in methods made available in the app.
+              You are responsible for keeping your account credentials and authentication methods
+              secure and for activity under your account.
             </p>
           ),
         },
@@ -117,13 +116,12 @@ function TermsPage() {
           heading: "Subscriptions and purchases",
           body: (
             <p>
-              Foocus offers a free tier with a daily task limit and an optional Pro subscription
-              that removes that limit. Subscriptions are purchased and managed through the Apple App
-              Store or Google Play Store. Pricing, renewal terms, and cancellation rights are
-              governed by the respective store's terms.{" "}
-              <Placeholder>
-                Add any direct-supply details if applicable, e.g. Stripe billing.
-              </Placeholder>
+              Foocus offers a free tier with usage limits and an optional Pro subscription that
+              provides access to additional/premium functionality. Subscriptions are purchased and
+              managed through the Apple App Store or Google Play Store. Pricing, renewal terms,
+              cancellation procedures, and applicable refund rules are governed by the terms and
+              policies of the store through which the subscription was purchased. Foocus does not
+              directly process mobile subscription payments.
             </p>
           ),
         },
@@ -136,8 +134,8 @@ function TermsPage() {
               it. Cancellation takes effect at the end of the current billing period. Refund
               requests are subject to the app store's refund policy. If you believe a refund is
               warranted, contact{" "}
-              <a className="text-primary underline" href="mailto:support@foocus.app">
-                support@foocus.app
+              <a className="text-primary underline" href="mailto:foocus.app@gmail.com">
+                foocus.app@gmail.com
               </a>
               .
             </p>
@@ -148,9 +146,10 @@ function TermsPage() {
           heading: "Intellectual property",
           body: (
             <p>
-              Foocus, including its code, design, logos and content, is owned by{" "}
-              <Placeholder>legal entity name</Placeholder> and protected by applicable intellectual
-              property laws. Your tasks and their content remain yours.
+              Foocus, including its code, design, logos, branding, and original content, is owned or
+              licensed by the Foocus operator and protected by applicable intellectual property
+              laws. Your tasks and the content you create remain yours, subject to any rights of
+              third parties contained in that content.
             </p>
           ),
         },
@@ -171,11 +170,10 @@ function TermsPage() {
           heading: "Limitation of liability",
           body: (
             <p>
-              To the fullest extent permitted by law, <Placeholder>legal entity name</Placeholder>{" "}
-              shall not be liable for any indirect, incidental, special, consequential, or punitive
-              damages, or any loss of profits or data, arising from your use of Foocus. Our total
-              liability shall not exceed the amount you paid for the app in the{" "}
-              <Placeholder>period, e.g. "12 months preceding the claim"</Placeholder>.
+              To the fullest extent permitted by law, the Foocus operator shall not be liable for
+              any indirect, incidental, special, consequential, or punitive damages, or any loss of
+              profits or data, arising from your use of Foocus. Our total liability shall not exceed
+              the amount you paid for Foocus during the 12 months preceding the claim.
             </p>
           ),
         },
@@ -196,8 +194,8 @@ function TermsPage() {
           body: (
             <p>
               Questions about these terms? Email{" "}
-              <a className="text-primary underline" href="mailto:support@foocus.app">
-                support@foocus.app
+              <a className="text-primary underline" href="mailto:foocus.app@gmail.com">
+                foocus.app@gmail.com
               </a>
               .
             </p>

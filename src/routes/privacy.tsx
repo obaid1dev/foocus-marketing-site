@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { LegalLayout, Placeholder } from "@/components/site/LegalLayout";
+import { LegalLayout } from "@/components/site/LegalLayout";
 
 const TITLE = "Privacy Policy — Foocus";
 const DESCRIPTION =
@@ -25,12 +25,12 @@ function PrivacyPage() {
   return (
     <LegalLayout
       title="Privacy Policy"
-      updated={new Date("2026-09-07").toLocaleDateString("en-US", {
+      updated={new Date("2026-09-08").toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
       })}
-      intro="This page explains what Foocus collects, why, and what you can ask us to do with it. Anything marked in brackets still needs to be confirmed before publishing."
+      intro="This page explains what Foocus collects, why, and what you can ask us to do with it."
       relatedLabel="Terms of Service"
       relatedHref="/terms"
       sections={[
@@ -39,10 +39,10 @@ function PrivacyPage() {
           heading: "Who we are",
           body: (
             <p>
-              Foocus is a productivity app operated by <Placeholder>legal entity name</Placeholder>,
-              based in <Placeholder>country / jurisdiction</Placeholder>. You can reach us at{" "}
-              <a className="text-primary underline" href="mailto:support@foocus.app">
-                support@foocus.app
+              Foocus is an AI-assisted productivity app operated under the Foocus name. Foocus is
+              based in Pakistan. You can reach us at{" "}
+              <a className="text-primary underline" href="mailto:foocus.app@gmail.com">
+                foocus.app@gmail.com
               </a>
               .
             </p>
@@ -66,9 +66,10 @@ function PrivacyPage() {
                 figures shown on the analytics screen.
               </li>
               <li>
-                <strong>Account and purchase state.</strong>{" "}
-                <Placeholder>account identifiers you actually store</Placeholder> and whether an
-                active subscription exists.
+                <strong>Account and purchase state.</strong> Account identifiers and authentication
+                information needed to provide your Foocus account and sync your data — such as your
+                account/user ID and authentication-related information — and whether an active
+                subscription exists.
               </li>
             </ul>
           ),
@@ -91,8 +92,10 @@ function PrivacyPage() {
           body: (
             <p>
               Foocus relies on third parties to run parts of the service — for example an AI
-              provider for the assistant and an app store for payments. The current list is{" "}
-              <Placeholder>AI provider, hosting/database provider, app stores</Placeholder>. We do
+              provider for the assistant and app stores for payments. The current list includes
+              third-party AI services, Supabase for backend/database and authentication services,
+              Vercel for website hosting, Apple App Store and Google Play for app distribution and
+              subscription purchases, and RevenueCat for subscription entitlement management. We do
               not sell your data.
             </p>
           ),
@@ -102,11 +105,15 @@ function PrivacyPage() {
           heading: "Retention and deletion",
           body: (
             <p>
-              Your tasks stay available until you delete them or ask us to delete your account. Our
-              current retention period for backups and logs is{" "}
-              <Placeholder>retention period</Placeholder>. To request deletion, email{" "}
-              <a className="text-primary underline" href="mailto:support@foocus.app">
-                support@foocus.app
+              Your tasks stay available until you delete them or request deletion of your account.
+              Foocus does not promise a fixed retention period for backups, security logs, or
+              operational records because retention may vary depending on technical, security,
+              legal, and operational requirements. When you request account or data deletion, Foocus
+              will take reasonable steps to delete the applicable data, subject to information that
+              must be retained for legitimate legal, security, fraud-prevention, or operational
+              purposes. To request deletion, email{" "}
+              <a className="text-primary underline" href="mailto:foocus.app@gmail.com">
+                foocus.app@gmail.com
               </a>
               .
             </p>
@@ -120,8 +127,8 @@ function PrivacyPage() {
               <li>Delete individual tasks at any time from inside the app.</li>
               <li>Request a copy of your data or its deletion by email.</li>
               <li>
-                Depending on where you live, you may have additional rights under{" "}
-                <Placeholder>applicable law, e.g. GDPR / CCPA</Placeholder>.
+                Depending on where you live, you may have additional rights under applicable privacy
+                laws.
               </li>
             </ul>
           ),
@@ -131,8 +138,8 @@ function PrivacyPage() {
           heading: "Children",
           body: (
             <p>
-              Foocus is not intended for children under <Placeholder>minimum age</Placeholder>, and
-              we do not knowingly collect their data.
+              Foocus is not intended for children under 13, and we do not knowingly collect their
+              data.
             </p>
           ),
         },

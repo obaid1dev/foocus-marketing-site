@@ -81,8 +81,11 @@ export function LegalLayout({
             <div className="mt-10 border border-border bg-primary-soft/60 p-6">
               <p className="text-sm leading-relaxed text-foreground">
                 Questions about this page? Email{" "}
-                <a className="font-medium text-primary underline" href="mailto:support@foocus.app">
-                  support@foocus.app
+                <a
+                  className="font-medium text-primary underline"
+                  href="mailto:foocus.app@gmail.com"
+                >
+                  foocus.app@gmail.com
                 </a>{" "}
                 or read the{" "}
                 <Link className="font-medium text-primary underline" to={relatedHref}>
@@ -96,13 +99,5 @@ export function LegalLayout({
       </main>
       <SiteFooter />
     </div>
-  );
-}
-
-export function Placeholder({ children }: { children: ReactNode }) {
-  return (
-    <mark className="bg-primary-soft px-1.5 py-0.5 font-mono text-[0.8rem] text-accent-foreground">
-      [{children}]
-    </mark>
   );
 }

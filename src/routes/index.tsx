@@ -499,7 +499,7 @@ const FAQS = [
   },
   {
     q: "How do I get support?",
-    a: "Email us at support@foocus.app — we read every message.",
+    a: "Email us at foocus.app@gmail.com — we read every message.",
   },
 ];
 
@@ -550,7 +550,7 @@ function FinalCta() {
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href="mailto:support@foocus.app?subject=Get%20Foocus"
+                href="mailto:foocus.app@gmail.com?subject=Get%20Foocus"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition-colors hover:bg-primary/90"
               >
                 Get Foocus

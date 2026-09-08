@@ -60,10 +60,10 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
                 <a
-                  href="mailto:support@foocus.app"
+                  href="mailto:foocus.app@gmail.com"
                   className="text-foreground transition-colors hover:text-primary"
                 >
-                  support@foocus.app
+                  foocus.app@gmail.com
                 </a>
               </li>
               <li>

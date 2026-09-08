@@ -38,7 +38,7 @@ function NotFoundComponent() {
               Back to Foocus
             </Link>
             <a
-              href="mailto:support@foocus.app"
+              href="mailto:foocus.app@gmail.com"
               className="inline-flex items-center justify-center rounded-md border border-border-strong bg-background px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-muted"
             >
               Contact support
