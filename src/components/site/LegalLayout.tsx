@@ -17,7 +17,7 @@ export function LegalLayout({
   updated: ReactNode;
   sections: { id: string; heading: string; body: ReactNode }[];
   relatedLabel: string;
-  relatedHref: "/privacy" | "/terms";
+  relatedHref: string;
 }) {
   return (
     <div className="min-h-screen bg-background">
