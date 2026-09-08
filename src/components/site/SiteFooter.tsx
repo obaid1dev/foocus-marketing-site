@@ -1,7 +1,5 @@
 import { Link } from "@tanstack/react-router";
 
-import logoAsset from "@/assets/foocus-logo.png.asset.json";
-
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-surface">
@@ -9,7 +7,13 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-xs">
             <div className="flex items-center gap-2.5">
-              <img src={logoAsset.url} alt="Foocus logo" className="h-8 w-8" />
+              <img
+                src="/images/foocus-logo.png"
+                alt="Foocus logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="text-base font-semibold tracking-tight text-ink">Foocus</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -23,8 +27,8 @@ export function SiteFooter() {
             links={[
               { label: "Features", href: "/#features" },
               { label: "How it works", href: "/#how-it-works" },
-              { label: "Pricing", href: "/#pricing" },
               { label: "FAQ", href: "/#faq" },
+              { label: "Get Foocus", href: "/#get-foocus" },
             ]}
           />
 
@@ -46,14 +50,6 @@ export function SiteFooter() {
                   Terms of Service
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/refunds"
-                  className="text-foreground transition-colors hover:text-primary"
-                >
-                  Refund &amp; Cancellation
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -71,7 +67,10 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href="/#get-foocus" className="text-foreground transition-colors hover:text-primary">
+                <a
+                  href="/#get-foocus"
+                  className="text-foreground transition-colors hover:text-primary"
+                >
                   Get Foocus
                 </a>
               </li>
@@ -88,13 +87,7 @@ export function SiteFooter() {
   );
 }
 
-function FooterCol({
-  title,
-  links,
-}: {
-  title: string;
-  links: { label: string; href: string }[];
-}) {
+function FooterCol({ title, links }: { title: string; links: { label: string; href: string }[] }) {
   return (
     <div>
       <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">

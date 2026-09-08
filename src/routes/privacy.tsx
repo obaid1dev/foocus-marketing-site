@@ -25,8 +25,14 @@ function PrivacyPage() {
   return (
     <LegalLayout
       title="Privacy Policy"
-      updated={<Placeholder>date</Placeholder> as unknown as string}
+      updated={new Date("2026-09-07").toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })}
       intro="This page explains what Foocus collects, why, and what you can ask us to do with it. Anything marked in brackets still needs to be confirmed before publishing."
+      relatedLabel="Terms of Service"
+      relatedHref="/terms"
       sections={[
         {
           id: "who-we-are",
@@ -96,8 +102,8 @@ function PrivacyPage() {
           heading: "Retention and deletion",
           body: (
             <p>
-              Your tasks stay available until you delete them or ask us to delete your account.
-              Our current retention period for backups and logs is{" "}
+              Your tasks stay available until you delete them or ask us to delete your account. Our
+              current retention period for backups and logs is{" "}
               <Placeholder>retention period</Placeholder>. To request deletion, email{" "}
               <a className="text-primary underline" href="mailto:support@foocus.app">
                 support@foocus.app
@@ -125,8 +131,8 @@ function PrivacyPage() {
           heading: "Children",
           body: (
             <p>
-              Foocus is not intended for children under{" "}
-              <Placeholder>minimum age</Placeholder>, and we do not knowingly collect their data.
+              Foocus is not intended for children under <Placeholder>minimum age</Placeholder>, and
+              we do not knowingly collect their data.
             </p>
           ),
         },

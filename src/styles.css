@@ -10,8 +10,7 @@
  */
 
 @theme inline {
-  --font-sans:
-    "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
   --radius-sm: calc(var(--radius) - 2px);
@@ -48,6 +47,9 @@
 
   --shadow-soft: 0 1px 2px oklch(0.45 0.12 258 / 0.06), 0 8px 24px oklch(0.45 0.12 258 / 0.06);
   --shadow-lift: 0 2px 4px oklch(0.45 0.12 258 / 0.06), 0 20px 48px oklch(0.45 0.12 258 / 0.1);
+
+  --text-display: clamp(2.75rem, 7vw, 4.75rem);
+  --text-hero: clamp(2.25rem, 5.5vw, 3.75rem);
 }
 
 :root {
@@ -92,12 +94,13 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   h1,
   h2,
   h3 {
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
     color: var(--color-ink);
     text-wrap: balance;
   }
@@ -125,6 +128,18 @@
     linear-gradient(to right, oklch(0.55 0.204 258 / 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, oklch(0.55 0.204 258 / 0.06) 1px, transparent 1px);
   background-size: 64px 64px;
+}
+
+@utility text-display {
+  font-size: var(--text-display);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+@utility text-hero {
+  font-size: var(--text-hero);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
 }
 
 @utility reveal {

@@ -9,11 +9,15 @@ export function LegalLayout({
   intro,
   updated,
   sections,
+  relatedLabel,
+  relatedHref,
 }: {
   title: string;
   intro: string;
-  updated: string;
+  updated: ReactNode;
   sections: { id: string; heading: string; body: ReactNode }[];
+  relatedLabel: string;
+  relatedHref: "/privacy" | "/terms";
 }) {
   return (
     <div className="min-h-screen bg-background">
@@ -48,12 +52,25 @@ export function LegalLayout({
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8">
+                <Link
+                  to="/"
+                  className="text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                >
+                  ← Back to Foocus
+                </Link>
+              </div>
             </div>
           </nav>
 
           <article className="max-w-[68ch]">
             {sections.map((s) => (
-              <section key={s.id} id={s.id} className="scroll-mt-24 border-b border-border py-8 first:pt-0 last:border-b-0">
+              <section
+                key={s.id}
+                id={s.id}
+                className="scroll-mt-24 border-b border-border py-8 first:pt-0 last:border-b-0"
+              >
                 <h2 className="text-xl font-semibold md:text-2xl">{s.heading}</h2>
                 <div className="mt-4 space-y-4 text-[0.975rem] leading-7 text-foreground/90 [&_li]:leading-7 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
                   {s.body}
@@ -68,8 +85,8 @@ export function LegalLayout({
                   support@foocus.app
                 </a>{" "}
                 or read the{" "}
-                <Link className="font-medium text-primary underline" to="/terms">
-                  Terms of Service
+                <Link className="font-medium text-primary underline" to={relatedHref}>
+                  {relatedLabel}
                 </Link>
                 .
               </p>
