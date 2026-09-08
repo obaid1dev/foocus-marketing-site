@@ -50,6 +50,14 @@ export function SiteFooter() {
                   Terms of Service
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/delete-account"
+                  className="text-foreground transition-colors hover:text-primary"
+                >
+                  Delete Account
+                </Link>
+              </li>
             </ul>
           </div>
 
